@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+const clearConsole = require("clear-any-console");
+
+// Clears the console for better readability
+clearConsole();
+
 console.log(`
 👋 Andy Coupe - Software Engineer 👋
 
