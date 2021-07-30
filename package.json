@@ -1,0 +1,7 @@
+{
+  "name": "andy-coupe",
+  "version": "1.0.0",
+  "bin": {
+    "andy-coupe": "index.js"
+  }
+}
