@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 const welcome = require("cli-welcome");
 const packageJsonFile = require("./package.json");
+const chalk = require("chalk");
+
+const twitterColor = chalk.hex("#1da1f2").bold;
+const githubColor = chalk.green;
+const blogColor = chalk.magenta;
 
 welcome({
   title: packageJsonFile.name,
@@ -13,25 +18,20 @@ welcome({
 });
 
 console.log(`
-👋 Andy Coupe - Software Engineer 👋
 
-Thanks for npx'ing me and welcoming me into your terminal.
+👋 ${chalk.magenta.inverse.bold(" Andy Coupe - Software Engineer ")} 👋
+
+${chalk.green(`Thanks for npx'ing me and welcoming me into your terminal.`)}
 
   ===========
 
-  I'm Andy Coupe, a software engineer based in Manchester, UK. 
+  ${chalk.italic(`I'm Andy Coupe, a software engineer based in Manchester, UK. 
   I'm currently working at Yozobi building cool things with cool technologies 
-  such as TypeScript, React, NodeJS, GraphQL, AWS and more!
-
-  I love ⚽️ and I'm a big fan of Liverpool FC. I'm also the proud owner 
-  of a Siberian Husky named Ice! 🧊
-
-  Find out more about me using 
-  my social links below 👇
+  like TypeScript, React, NodeJS, GraphQL, AWS and more!`)}
 
   ===========
 
-🐦 Twitter: https://twitter.com/andycoupedev
-📖 GitHub: https://github.com/andrewmcoupe
-📝 Blog: https://dev.to/andrewmcoupe
+🐦 ${twitterColor(`Twitter`)}: ${chalk.dim(`https://twitter.com/andycoupedev`)}
+📖 ${githubColor(`GitHub`)}: ${chalk.dim(`https://github.com/andrewmcoupe`)}
+📝 ${blogColor(`Blog`)}: ${chalk.dim(`https://dev.to/andrewmcoupe`)}
 `);
