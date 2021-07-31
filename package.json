@@ -12,5 +12,13 @@
     "andy",
     "coupe",
     "andy coupe"
-  ]
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "andrewmcoupe/andy-coupe",
+  "author": {
+    "name": "Andy Coupe",
+    "email": "andrewmcoupe@gmail.com",
+    "url": "https://twitter.com/andycoupedev"
+  }
 }
