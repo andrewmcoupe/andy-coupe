@@ -1,10 +1,11 @@
 {
   "name": "andy-coupe",
+  "description": "Get to know Andy Coupe via `npx andy-coupe`",
   "version": "1.1.0",
   "bin": {
     "andy-coupe": "index.js"
   },
   "dependencies": {
-    "clear-any-console": "^1.16.2"
+    "cli-welcome": "^2.2.2"
   }
 }
