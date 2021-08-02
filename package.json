@@ -1,7 +1,7 @@
 {
   "name": "andy-coupe",
   "description": "Get to know Andy Coupe via `npx andy-coupe`",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "bin": {
     "andy-coupe": "index.js"
   },
