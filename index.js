@@ -1,32 +1,18 @@
 #!/usr/bin/env node
-const chalk = require("chalk");
-const init = require("./utils/init");
-
-const twitterColor = chalk.hex("#1da1f2").bold;
-const githubColor = chalk.green;
-const blogColor = chalk.magenta;
+import init from "./utils/init.js";
+import data from "./utils/data.js";
+import cli from "./utils/cli.js";
+import { debug } from "./utils/debug.js";
 
 (() => {
   init();
+  cli.input.includes("help") && cli.showHelp(0);
 
-  console.log(`
-  
-  👋 ${chalk.magenta.inverse.bold(" Andy Coupe - Software Engineer ")} 👋
-  
-  ${chalk.green(`Thanks for npx'ing me and welcoming me into your terminal.`)}
-  
-    ===========
-  
-    ${chalk.italic(`I'm Andy Coupe, a software engineer based in Manchester, UK. 
-    I'm currently working at Yozobi building cool things with cool technologies 
-    like TypeScript, React, NodeJS, GraphQL, AWS and more!`)}
-  
-    ===========
-  
-  🐦 ${twitterColor(`Twitter`)}: ${chalk.dim(
-    `https://twitter.com/andycoupedev`
-  )}
-  📖 ${githubColor(`GitHub`)}: ${chalk.dim(`https://github.com/andrewmcoupe`)}
-  📝 ${blogColor(`Blog`)}: ${chalk.dim(`https://dev.to/andrewmcoupe`)}
-  `);
+  console.log(data.bio);
+
+  if (cli.flags.social) {
+    console.log(data.socialInfo);
+  }
+
+  debug(cli);
 })();

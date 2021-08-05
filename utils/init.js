@@ -1,17 +1,17 @@
-const welcome = require("cli-welcome");
-const checkNode = require("cli-check-node");
-const unhandled = require("cli-handle-unhandled");
+import welcome from "cli-welcome";
+import checkNode from "cli-check-node";
+import unhandled from "cli-handle-unhandled";
 
-const packageJsonFile = require("../package.json");
+import cli from "./cli.js";
 
-module.exports = () => {
+export default () => {
   unhandled();
 
   welcome({
-    title: packageJsonFile.name,
+    title: cli.pkg.name,
     tagLine: "Hola!",
-    description: packageJsonFile.description,
-    version: packageJsonFile.version,
+    description: cli.pkg.description,
+    version: cli.pkg.version,
     bgColor: "#FADC00",
     bold: true,
     clear: true,
